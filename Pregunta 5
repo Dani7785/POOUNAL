@@ -1,0 +1,12 @@
+## Pregunta 5:
+
+####  Dado el radio de un círculo. Haga un algoritmo que obtenga el área del círculo y la longitud de la circunferencia
+
+from math import pi
+
+radio = float(input("Ingrese el radio de un circulo en cm "))
+
+area_circulo = pi * radio**2
+longitud_circunferencia = 2 * pi * radio
+
+print(f"El area del circulo es {area_circulo} cm y la longitud de la circunferencia es {longitud_circunferencia} cm")
