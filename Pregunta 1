@@ -1,0 +1,20 @@
+##  Pregunta 1: 
+#### A la mamá de Juan le preguntan su edad, y contesta: tengo 3 hijos, pregúntele a Juan su edad. Alberto tiene 2/3 de la edad de Juan, Ana tiene 
+#### 4/3 de la edad de Juan y mi edad es la suma de las tres. Hacer un algoritmo que muestre la edad de los cuatro
+
+def edad_mama_juan():
+  
+  edad_juan = int(input("Ingresa la edad de juan "))
+  
+  if edad_juan <= 0: return "La edad de juan no puede ser negativa ni 0"
+  if edad_juan > 100: return "La edad de juan no puede ser superior a 100 años"
+  
+  edad_alberto = (2/3) * edad_juan
+  edad_ana = (4/3) * edad_juan
+  edad_mama_juan = (edad_juan + edad_alberto + edad_ana)
+  
+  if edad_mama_juan > 100: return f"La mama de juan ya no esta con nosotros, pero tendria {edad_mama_juan} años"
+  
+  return(f"La mamá de Juan tiene {edad_mama_juan} años, Alberto tiene {edad_alberto} años, Ana tiene {edad_ana} años y Juan tiene {edad_juan} años")
+
+print(edad_mama_juan())
