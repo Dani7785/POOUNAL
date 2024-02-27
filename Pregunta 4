@@ -1,0 +1,10 @@
+## Pregunta 4:
+
+#### Elabore un algoritmo que lea un número y obtenga su cuadrado y su cubo.
+
+def new_func():
+    numero = int(input("Ingrese un numero entero "))
+
+    print(f"El numero ingresado es {numero}, su cuadrado es {numero**2} y su cubo es {numero**3}")
+
+new_func()
