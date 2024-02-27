@@ -1,0 +1,29 @@
+## Pregunta 2:
+
+#Hacer un seguimiento (prueba de escritorio) del siguiente grupo de instrucciones.
+#<br>
+#INICIO
+# <br>
+# SUMA = 0
+# <br>
+# X = 20
+# <br>
+# SUMA = SUMA + X
+# <br>
+# Y = 40
+# <br>
+# X = X + Y ** 2
+# <br>
+# SUMA = SUMA + X / Y
+# <br>
+# ESCRIBA : “EL VALOR DE LA SUMA ES:”, SUMA
+# <br>
+#FIN_INICIO 
+
+suma = 0
+x = 20
+suma = suma + x 
+y = 40
+x = x + y ** 2
+suma = suma + x/y
+print(f"el valor de la suma es {suma}")
