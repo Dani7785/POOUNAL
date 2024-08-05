@@ -9,8 +9,8 @@ import numpy as np
 class App(tk.Tk):
   def __init__(self):
     super().__init__()
-    self.logo_menu = util_img.leer_imagen("actividad_3_parte_2\img\menu.png", (30,30))
-    self.escudo_un = util_img.leer_imagen("actividad_3_parte_2\img\escudo_un.png", (350,400))
+    self.logo_menu = util_img.leer_imagen("img/menu.png", (30,30))
+    self.escudo_un = util_img.leer_imagen("img/escudo_un.png", (350,400))
     self.config_window()
     self.paneles()
     self.controles_barra_superior() 
@@ -41,10 +41,10 @@ class App(tk.Tk):
     font_awesome = font.Font(family='FontAwesome', size=12)
     
     self.buttonMenuLateral = tk.Button(self.barra_superior, image=self.logo_menu ,font=font_awesome, command=self.toggle_panel,
-                                        bd=0, bg=COLOR_BARRA_SUPERIOR, fg="white", padx=10, cursor="hand1")
+                                        bd=0, bg=COLOR_BARRA_SUPERIOR, fg="green", padx=10, cursor="hand1")
     self.buttonMenuLateral.pack(side=tk.LEFT)
 
-    self.buttonTitle = tk.Button(self.barra_superior, text="Programacion orientada a objetos", fg="white", cursor="hand1")
+    self.buttonTitle = tk.Button(self.barra_superior, text="Programacion orientada a objetos", fg="green", cursor="hand1")
     self.buttonTitle.config(fg="#fff", font=("Roboto", 15), bg=COLOR_BARRA_SUPERIOR, pady=10, width=30, bd=0, command=self.informacion_inicial)
     self.buttonTitle.pack(side=tk.LEFT)
 
@@ -79,7 +79,7 @@ class App(tk.Tk):
     self.limpiar_cuerpo_principal()
     label = tk.Label(self.cuerpo_principal, image=self.escudo_un, bg=COLOR_CUERPO_PRINCIPAL)
     label.pack(side=tk.TOP)
-    label = tk.Label(self.cuerpo_principal, text="\nUniversidad Nacional de Colombia\n\nProgramación Orientada a Objetos - Actividad 3\n\n Daniel Esteban Alvarez - David Gil Rua", bg=COLOR_CUERPO_PRINCIPAL, font=("Roboto", 20))
+    label = tk.Label(self.cuerpo_principal, text="\nUniversidad Nacional de Colombia\n\nProgramación Orientada a Objetos - Actividad 3\n\n Daniel Esteban Alvarez ", bg=COLOR_CUERPO_PRINCIPAL, font=("Roboto", 20))
     label.pack(side=tk.TOP)                  
     
   def controles_cuerpo(self):
@@ -90,7 +90,7 @@ class App(tk.Tk):
       
   def configurar_boton_menu(self, button, text, font_awesome, ancho_menu, alto_menu, action):
         button.config(text=f"{text}", anchor="w", font=font_awesome,
-                      bd=0, bg=COLOR_MENU_LATERAL, fg="white", width=ancho_menu, height=alto_menu, command=action, padx=10) 
+                      bd=0, bg=COLOR_MENU_LATERAL, fg="green", width=ancho_menu, height=alto_menu, command=action, padx=10) 
         button.pack(side=tk.TOP)
         self.bind_hover_events(button)
 
@@ -101,11 +101,11 @@ class App(tk.Tk):
 
   def on_enter(self, event, button):
       # Cambiar estilo al pasar el ratón por encima
-      button.config(bg=COLOR_MENU_CURSOR_ENCIMA, fg='white')
+      button.config(bg=COLOR_MENU_CURSOR_ENCIMA, fg='green')
 
   def on_leave(self, event, button):
       # Restaurar estilo al salir el ratón
-      button.config(bg=COLOR_MENU_LATERAL, fg='white')
+      button.config(bg=COLOR_MENU_LATERAL, fg='blue')
 
   def toggle_panel(self):
       # Alternar visibilidad del menú lateral
